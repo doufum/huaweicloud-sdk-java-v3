@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <groupId>com.huaweicloud.sdk</groupId>
     <artifactId>huaweicloud-sdk</artifactId>
-    <version>3.1.67</version>
+    <version>3.1.67-cloudstar</version>
     <name>Huawei Cloud SDK for Java Parent</name>
     <description>Huawei Cloud SDK for Java</description>
     <url>https://github.com/huaweicloud/huaweicloud-sdk-java-v3</url>
@@ -261,14 +261,15 @@
         </profile>
     </profiles>
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+        <!--  mvn clean install, then mvn deploy at last       -->
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>maven-releases</id>
+            <url>http://10.182.0.99:8081/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://10.182.0.99:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
